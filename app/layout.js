@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import RenderNotifier from "@/components/RenderNotifier";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +18,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log('Layout component computed')
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <RenderNotifier />
       </body>
     </html>
   );

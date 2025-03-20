@@ -1,13 +1,13 @@
 'use client';
 
+import { useState } from "react";
+
 const LoggerButton = ({text}) => {
-  const log = () => {
-    console.log(`LoggerButton here. They asked me to log: ${text}`)
-  }
+  const [data] = useState(() => () => null);
 
-  console.log('logger button computed');
+  console.log('a-1', data);
 
-  return <button onClick={log}>Log this!</button>
+  return <button onClick={data}>Log this!</button>
 }
 
 export default LoggerButton;
