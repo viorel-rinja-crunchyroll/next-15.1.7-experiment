@@ -9,15 +9,23 @@ const getTitle = async (id) => {
   return title;
 }
 
-export default async function Hehe({params}) {
+export default async function Hehe({children, params}) {
   console.log('Hehe component computed')
 
   const title = await getTitle(params.id);
 
+  const numericPage = Number(params.id);
+  const nextPage = numericPage + 1;
+
   return (
     <div className={styles.page}>
       <h1>Hehe: {title}</h1>
-      <Link href="/">Go Home ➡️</Link>
+      <div>
+        <Link href="/">Go Home ➡️</Link>
+        <br/>
+        <Link href={`/hehe/${nextPage}`}>Go to Hehe {nextPage} ➡️</Link>
+      </div>
+      {children}
       <LoggerButton text="from hehe page"/>
     </div>
   );

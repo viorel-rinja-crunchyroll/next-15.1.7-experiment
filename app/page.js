@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <h1>Home</h1>
-      <Link href="/hehe">Go to Hehe ➡️</Link>
+      <Link href="/hehe/1">Go to Hehe ➡️</Link>
       <ul>
         <li>Unlike traditional SSR, RSC's server does not render only once</li>
         <li>RSCs can make requests</li>
@@ -17,4 +17,12 @@ export default function Home() {
       </ul>
     </div>
   );
+}
+
+export function generateStaticParams() {
+  return [
+    {
+      slug: "",
+    },
+  ];
 }
