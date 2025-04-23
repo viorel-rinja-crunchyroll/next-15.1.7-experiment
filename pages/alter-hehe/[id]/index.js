@@ -16,12 +16,12 @@ export default function Hehe({ children, title, id }) {
       <div>
         <Link href="/">Go Home ➡️</Link>
         <br />
-        <Link href={`/hehe/${nextPage}`}>Go to next: {nextPage} ➡️</Link>
+        <Link href={`/alter-hehe/${nextPage}`}>Go to next: {nextPage} ➡️</Link>
         <br />
-        <Link href={`/alter-hehe/${nextPage}`}>Go to the other next: {nextPage} ➡️</Link>
+        <Link href={`/hehe/${nextPage}`}>Go to the other next: {nextPage} ➡️</Link>
       </div>
       {children}
-      <LoggerButton text="from hehe page"/>
+      <LoggerButton text="from hehe page" />
     </div>
   );
 }
