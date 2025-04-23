@@ -1,5 +1,7 @@
-import styles from "./page.module.css";
+// import styles from "../app/page.module.css";
 import Link from "next/link";
+
+const styles = {}
 
 export default function Home() {
   console.log('Home component computed')
@@ -19,10 +21,9 @@ export default function Home() {
   );
 }
 
-export function generateStaticParams() {
-  return [
-    {
-      slug: "",
-    },
-  ];
+// Note: getStaticProps replaces generateStaticParams in Pages Router
+export function getStaticProps() {
+  return {
+    props: {}
+  };
 }

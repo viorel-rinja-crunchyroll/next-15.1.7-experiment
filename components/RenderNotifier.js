@@ -1,5 +1,3 @@
-'use client'
-
 const RenderNotifier = () => {
   console.log('RenderNotiifer component computed!');
 
